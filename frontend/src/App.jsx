@@ -33,13 +33,13 @@ const App = () => {
         }
       >
         <Route path="/" element={<Dashboard />} />
-        <Route path="tasks" element={<Tasks />} />
-        <Route path="calendar" element={<Calendar />} />
-        <Route path="notes" element={<Notes />} />
-        <Route path="ai" element={<AIAssistant />} />
-        <Route path="focus" element={<FocusMode />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="settings" element={<Settings />} />
+        <Route path="/tasks" element={<Tasks />} />
+        <Route path="/calendar" element={<Calendar />} />
+        <Route path="/notes" element={<Notes />} />
+        <Route path="/ai" element={<AIAssistant />} />
+        <Route path="/focus" element={<FocusMode />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/settings" element={<Settings />} />
       </Route>
 
       <Route path="*" element={<Navigate to="/" replace />} />
