@@ -39,14 +39,11 @@ const Register = () => {
         toast.success(
           "Account created! Check your email for a verification code.",
         );
-        navigate("/verify-email", { state: { email: form.email } });
       } else {
         toast.success("Welcome aboard! 🎉");
-        navigate("/", { replace: true });
       }
     } catch (err) {
       toast.error(err.response?.data?.message || "Could not create account");
-    } finally {
       setLoading(false);
     }
   };

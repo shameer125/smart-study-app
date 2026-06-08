@@ -31,16 +31,10 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const data = await login(form);
+      await login(form);
       toast.success("Welcome back!");
-      if (data?.user && data.user.isVerified === false) {
-        navigate("/verify-email", { state: { email: data.user.email } });
-      } else {
-        navigate(location.state?.from || "/", { replace: true });
-      }
     } catch (err) {
       toast.error(err.response?.data?.message || "Login failed");
-    } finally {
       setLoading(false);
     }
   };
