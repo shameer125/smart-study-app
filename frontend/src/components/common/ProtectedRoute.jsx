@@ -10,7 +10,8 @@ const ProtectedRoute = ({ children }) => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-aurora bg-[length:200%_200%] animate-gradient-x flex items-center justify-center shadow-glow">
+          <div className="w-14 h-14 rounded-2xl bg-gradient-aurora bg-[length:200%_200%] 
+          animate-gradient-x flex items-center justify-center shadow-glow">
             <HiOutlineSparkles className="w-7 h-7 text-white animate-pulse" />
           </div>
           <div className="text-sm text-slate-500">Loading SmartStudy…</div>
