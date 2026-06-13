@@ -26,7 +26,8 @@ const Button = ({
       {...rest}
     >
       {loading ? (
-        <span className="w-4 h-4 rounded-full border-2 border-white/40 border-t-white animate-spin" />
+        <span className="w-4 h-4 rounded-full border-2 border-white/40 border-t-white 
+        animate-spin" />
       ) : (
         Icon && <Icon className="w-4 h-4" />
       )}
