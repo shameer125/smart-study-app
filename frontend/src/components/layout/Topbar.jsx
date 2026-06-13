@@ -63,7 +63,9 @@ const Topbar = ({ onToggleSidebar }) => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search tasks, notes, subjects…"
-            className="w-full pl-9 pr-3 py-2 bg-slate-100/70 dark:bg-slate-800/60 rounded-xl text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/40 border border-transparent focus:border-brand-500/40 transition"
+            className="w-full pl-9 pr-3 py-2 bg-slate-100/70 dark:bg-slate-800/60 rounded-xl text-sm 
+            placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/40 border border-transparent 
+            focus:border-brand-500/40 transition"
           />
           <div className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 text-[10px] gap-1 text-slate-400">
             <kbd className="px-1.5 py-0.5 rounded bg-slate-200/80 dark:bg-slate-700/60 font-mono">⌘</kbd>
@@ -100,7 +102,8 @@ const Topbar = ({ onToggleSidebar }) => {
               className="relative p-2 rounded-xl hover:bg-slate-200/60 dark:hover:bg-slate-800/60 transition"
             >
               <HiOutlineBell className="w-5 h-5" />
-              <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-rose-500 ring-2 ring-white dark:ring-slate-900" />
+              <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-rose-500 ring-2 ring-white 
+              dark:ring-slate-900" />
             </button>
             <AnimatePresence>
               {openNotif && (
@@ -118,7 +121,8 @@ const Topbar = ({ onToggleSidebar }) => {
                     {notifications.map((n) => (
                       <div
                         key={n.id}
-                        className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition cursor-pointer"
+                        className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-100/70 dark:hover:bg-slate-800/60 
+                        transition cursor-pointer"
                       >
                         <div
                           className={`mt-1 w-2 h-2 rounded-full ${
@@ -143,7 +147,8 @@ const Topbar = ({ onToggleSidebar }) => {
               onClick={() => setOpenMenu((o) => !o)}
               className="flex items-center gap-2 pl-1 pr-2 py-1 rounded-xl hover:bg-slate-200/60 dark:hover:bg-slate-800/60 transition"
             >
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-fuchsia-500 text-white text-sm font-semibold flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-fuchsia-500 text-white text-sm font-semibold flex 
+              items-center justify-center">
                 {initials(user?.name)}
               </div>
               <span className="hidden sm:block text-sm font-medium">{user?.name?.split(' ')[0]}</span>
@@ -166,14 +171,16 @@ const Topbar = ({ onToggleSidebar }) => {
                   <Link
                     to="/profile"
                     onClick={() => setOpenMenu(false)}
-                    className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100/70 dark:hover:bg-slate-800/60 text-sm"
+                    className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100/70 
+                    dark:hover:bg-slate-800/60 text-sm"
                   >
                     <HiOutlineUser className="w-4 h-4" /> Profile
                   </Link>
                   <Link
                     to="/settings"
                     onClick={() => setOpenMenu(false)}
-                    className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100/70 dark:hover:bg-slate-800/60 text-sm"
+                    className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100/70 
+                    dark:hover:bg-slate-800/60 text-sm"
                   >
                     <HiOutlineCog className="w-4 h-4" /> Settings
                   </Link>
@@ -183,7 +190,8 @@ const Topbar = ({ onToggleSidebar }) => {
                       logout();
                       navigate('/login');
                     }}
-                    className="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-rose-500/10 text-sm text-rose-500"
+                    className="w-full flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-rose-500/10 
+                    text-sm text-rose-500"
                   >
                     <HiOutlineLogout className="w-4 h-4" /> Sign out
                   </button>
