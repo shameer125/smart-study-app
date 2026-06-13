@@ -52,7 +52,8 @@ const Sidebar = ({ open, onClose }) => {
             className="flex items-center gap-2.5 px-5 pt-6 pb-5"
             onClick={onClose}
           >
-            <div className="w-10 h-10 rounded-2xl bg-gradient-aurora bg-[length:200%_200%] animate-gradient-x flex items-center justify-center shadow-glow">
+            <div className="w-10 h-10 rounded-2xl bg-gradient-aurora bg-[length:200%_200%] animate-gradient-x 
+            flex items-center justify-center shadow-glow">
               <HiOutlineSparkles className="w-5 h-5 text-white" />
             </div>
             <div>
@@ -80,7 +81,8 @@ const Sidebar = ({ open, onClose }) => {
                 <item.icon className="w-5 h-5" />
                 <span>{item.label}</span>
                 {item.glow && (
-                  <span className="ml-auto text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-md bg-gradient-to-r from-brand-500 to-fuchsia-500 text-white">
+                  <span className="ml-auto text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-md 
+                  bg-gradient-to-r from-brand-500 to-fuchsia-500 text-white">
                     AI
                   </span>
                 )}
@@ -105,7 +107,8 @@ const Sidebar = ({ open, onClose }) => {
 
           {/* Pro card */}
           <div className="px-3 pb-3">
-            <div className="relative overflow-hidden rounded-2xl p-4 bg-gradient-to-br from-brand-600 via-fuchsia-600 to-pink-600 text-white shadow-glow">
+            <div className="relative overflow-hidden rounded-2xl p-4 bg-gradient-to-br from-brand-600 
+            via-fuchsia-600 to-pink-600 text-white shadow-glow">
               <div className="absolute -top-8 -right-8 w-24 h-24 bg-white/10 rounded-full blur-2xl" />
               <div className="text-xs uppercase tracking-wider opacity-80">Streak</div>
               <div className="text-2xl font-display font-bold mt-1">
@@ -118,8 +121,10 @@ const Sidebar = ({ open, onClose }) => {
           </div>
 
           {/* User */}
-          <div className="m-3 mt-0 px-3 py-3 rounded-2xl border border-white/30 dark:border-white/5 bg-white/40 dark:bg-slate-900/40 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-fuchsia-500 text-white font-semibold flex items-center justify-center">
+          <div className="m-3 mt-0 px-3 py-3 rounded-2xl border border-white/30 dark:border-white/5 
+          bg-white/40 dark:bg-slate-900/40 flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-fuchsia-500 
+            text-white font-semibold flex items-center justify-center">
               {initials(user?.name)}
             </div>
             <div className="flex-1 min-w-0">
@@ -131,7 +136,8 @@ const Sidebar = ({ open, onClose }) => {
             <button
               onClick={logout}
               title="Logout"
-              className="p-2 rounded-lg text-slate-500 hover:text-rose-500 hover:bg-rose-500/10 transition"
+              className="p-2 rounded-lg text-slate-500 hover:text-rose-500 hover:bg-rose-500/10 
+              transition"
             >
               <HiOutlineLogout className="w-5 h-5" />
             </button>
