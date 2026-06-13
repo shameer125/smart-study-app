@@ -32,10 +32,12 @@ const VerifyBanner = () => {
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -8 }}
-        className="mx-3 mt-3 mb-1 rounded-2xl overflow-hidden relative bg-gradient-to-r from-amber-500/15 via-orange-500/15 to-rose-500/15 border border-amber-500/30 backdrop-blur"
+        className="mx-3 mt-3 mb-1 rounded-2xl overflow-hidden relative bg-gradient-to-r from-amber-500/15
+        via-orange-500/15 to-rose-500/15 border border-amber-500/30 backdrop-blur"
       >
         <div className="flex items-center gap-3 px-4 py-3">
-          <div className="shrink-0 w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 text-white flex items-center justify-center shadow">
+          <div className="shrink-0 w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 
+          text-white flex items-center justify-center shadow">
             <HiOutlineMail className="w-5 h-5" />
           </div>
           <div className="flex-1 min-w-0">
@@ -49,14 +51,16 @@ const VerifyBanner = () => {
           <button
             onClick={resend}
             disabled={sending}
-            className="hidden sm:inline-flex text-xs font-semibold px-3 py-1.5 rounded-lg bg-white/70 dark:bg-slate-900/60 hover:bg-white dark:hover:bg-slate-800 transition"
+            className="hidden sm:inline-flex text-xs font-semibold px-3 py-1.5 rounded-lg bg-white/70 
+            dark:bg-slate-900/60 hover:bg-white dark:hover:bg-slate-800 transition"
           >
             {sending ? 'Sending…' : 'Resend code'}
           </button>
           <Link
             to="/verify-email"
             state={{ email: user.email }}
-            className="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-lg bg-gradient-to-r from-brand-500 to-fuchsia-500 text-white hover:shadow-glow transition"
+            className="inline-flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-lg bg-gradient-to-r 
+            from-brand-500 to-fuchsia-500 text-white hover:shadow-glow transition"
           >
             Verify <HiOutlineArrowRight className="w-3 h-3" />
           </Link>
