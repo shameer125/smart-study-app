@@ -39,7 +39,8 @@ const Modal = ({ open, onClose, title, subtitle, children, footer, size = 'md' }
             transition={{ type: 'spring', stiffness: 280, damping: 28 }}
             className={`relative z-10 w-full ${sizes[size]} glass-strong rounded-3xl overflow-hidden`}
           >
-            <div className="flex items-start justify-between px-6 py-5 border-b border-white/30 dark:border-white/5">
+            <div className="flex items-start justify-between px-6 py-5 border-b border-white/30 
+            dark:border-white/5">
               <div>
                 {title && (
                   <h3 className="text-lg font-display font-semibold text-slate-900 dark:text-white">
@@ -59,7 +60,8 @@ const Modal = ({ open, onClose, title, subtitle, children, footer, size = 'md' }
             </div>
             <div className="px-6 py-5 max-h-[70vh] overflow-y-auto">{children}</div>
             {footer && (
-              <div className="px-6 py-4 border-t border-white/30 dark:border-white/5 flex justify-end gap-2 bg-white/40 dark:bg-slate-900/40">
+              <div className="px-6 py-4 border-t border-white/30 dark:border-white/5 flex justify-end gap-2 
+              bg-white/40 dark:bg-slate-900/40">
                 {footer}
               </div>
             )}
