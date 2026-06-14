@@ -7,6 +7,7 @@ export const Input = ({ label, error, className, icon: Icon, ...rest }) => (
         {label}
       </div>
     )}
+
     <div className="relative">
       {Icon && (
         <Icon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -34,6 +35,7 @@ export const Textarea = ({ label, error, className, rows = 4, ...rest }) => (
     />
     {error && <p className="text-xs text-rose-500 mt-1">{error}</p>}
   </label>
+
 );
 
 export const Select = ({ label, children, className, ...rest }) => (
@@ -47,6 +49,7 @@ export const Select = ({ label, children, className, ...rest }) => (
       {children}
     </select>
   </label>
+  
 );
 
 export default Input;
