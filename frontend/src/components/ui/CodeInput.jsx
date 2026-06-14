@@ -61,7 +61,9 @@ const CodeInput = ({ length = 6, value, onChange, autoFocus = true, disabled }) 
           inputMode="numeric"
           maxLength={1}
           disabled={disabled}
-          className="w-11 h-14 sm:w-12 sm:h-16 text-center text-xl sm:text-2xl font-display font-bold rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/60 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 transition disabled:opacity-50"
+          className="w-11 h-14 sm:w-12 sm:h-16 text-center text-xl sm:text-2xl font-display font-bold rounded-2xl border-2 
+          border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/60 focus:outline-none focus:border-brand-500 
+          focus:ring-2 focus:ring-brand-500/30 transition disabled:opacity-50"
         />
       ))}
     </div>
