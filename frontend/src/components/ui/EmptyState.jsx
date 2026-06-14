@@ -7,7 +7,8 @@ const EmptyState = ({ icon: Icon, title, description, action }) => (
     className="card p-10 flex flex-col items-center text-center"
   >
     {Icon && (
-      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-500/20 via-fuchsia-500/20 to-pink-500/20 flex items-center justify-center mb-4">
+      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-500/20 via-fuchsia-500/20 
+      to-pink-500/20 flex items-center justify-center mb-4">
         <Icon className="w-7 h-7 text-brand-500" />
       </div>
     )}
