@@ -299,7 +299,8 @@ const Calendar = () => {
                   <motion.div
                     key={e._id}
                     layout
-                    className="group relative overflow-hidden rounded-xl border border-slate-200/70 dark:border-slate-700/70 p-3"
+                    className="group relative overflow-hidden rounded-xl border border-slate-200/70 
+                    dark:border-slate-700/70 p-3"
                   >
                     <div
                       className={`absolute inset-y-0 left-0 w-1 bg-gradient-to-b ${grad}`}
@@ -321,13 +322,15 @@ const Calendar = () => {
                       <div className="flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition">
                         <button
                           onClick={() => openEdit(e)}
-                          className="p-1.5 rounded-lg text-slate-400 hover:text-brand-500 hover:bg-brand-500/10"
+                          className="p-1.5 rounded-lg text-slate-400 hover:text-brand-500 
+                          hover:bg-brand-500/10"
                         >
                           <HiOutlinePencil className="w-3.5 h-3.5" />
                         </button>
                         <button
                           onClick={() => onDelete(e)}
-                          className="p-1.5 rounded-lg text-slate-400 hover:text-rose-500 hover:bg-rose-500/10"
+                          className="p-1.5 rounded-lg text-slate-400 hover:text-rose-500 
+                          hover:bg-rose-500/10"
                         >
                           <HiOutlineTrash className="w-3.5 h-3.5" />
                         </button>
@@ -393,7 +396,8 @@ const Calendar = () => {
             />
           </div>
           <div>
-            <div className="mb-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">
+            <div className="mb-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300 
+            uppercase tracking-wider">
               Color
             </div>
             <div className="flex gap-2 flex-wrap">
