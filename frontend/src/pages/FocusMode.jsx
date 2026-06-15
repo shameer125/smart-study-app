@@ -209,7 +209,8 @@ const FocusMode = () => {
         <div className="relative flex items-center justify-center gap-3 mt-8">
           <button
             onClick={reset}
-            className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition flex items-center justify-center text-slate-500"
+            className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 
+            dark:hover:bg-slate-700 transition flex items-center justify-center text-slate-500"
             title="Reset"
           >
             <HiOutlineRefresh className="w-5 h-5" />
@@ -217,7 +218,8 @@ const FocusMode = () => {
           <motion.button
             onClick={() => setRunning((r) => !r)}
             whileTap={{ scale: 0.95 }}
-            className="w-20 h-20 rounded-3xl bg-gradient-to-br from-brand-500 via-fuchsia-500 to-pink-500 text-white shadow-glow-lg flex items-center justify-center"
+            className="w-20 h-20 rounded-3xl bg-gradient-to-br from-brand-500 via-fuchsia-500 
+            to-pink-500 text-white shadow-glow-lg flex items-center justify-center"
             title={running ? 'Pause' : 'Start'}
           >
             {running ? (
@@ -228,7 +230,8 @@ const FocusMode = () => {
           </motion.button>
           <button
             onClick={skip}
-            className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition flex items-center justify-center text-slate-500"
+            className="w-12 h-12 rounded-2xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 
+            dark:hover:bg-slate-700 transition flex items-center justify-center text-slate-500"
             title="Skip"
           >
             <HiOutlineFastForward className="w-5 h-5" />
@@ -242,7 +245,8 @@ const FocusMode = () => {
           <input
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="w-full mt-1.5 bg-transparent text-center text-lg font-semibold focus:outline-none border-b border-slate-300 dark:border-slate-600 focus:border-brand-500 transition pb-1"
+            className="w-full mt-1.5 bg-transparent text-center text-lg font-semibold focus:outline-none 
+            border-b border-slate-300 dark:border-slate-600 focus:border-brand-500 transition pb-1"
           />
         </div>
       </div>
