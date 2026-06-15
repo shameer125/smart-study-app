@@ -163,7 +163,8 @@ const Notes = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search notes, tags, content…"
-            className="w-full pl-9 pr-3 py-2 bg-slate-100/70 dark:bg-slate-800/60 rounded-xl text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/40"
+            className="w-full pl-9 pr-3 py-2 bg-slate-100/70 dark:bg-slate-800/60 rounded-xl text-sm 
+            placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/40"
           />
         </div>
         <div className="flex items-center gap-1.5 flex-wrap">
@@ -210,7 +211,8 @@ const Notes = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.03 }}
               onClick={() => setOpenViewer(n)}
-              className="card p-4 cursor-pointer hover:-translate-y-0.5 hover:shadow-glow transition group relative overflow-hidden"
+              className="card p-4 cursor-pointer hover:-translate-y-0.5 hover:shadow-glow transition group 
+              relative overflow-hidden"
             >
               <div
                 className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${
@@ -289,9 +291,11 @@ const Notes = () => {
                 href={`${filesBaseURL}${openViewer.file.url}`}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-3 p-3 rounded-xl border border-slate-200/70 dark:border-slate-700/70 mb-4 hover:bg-slate-100/40 dark:hover:bg-slate-800/40 transition"
+                className="flex items-center gap-3 p-3 rounded-xl border border-slate-200/70 
+                dark:border-slate-700/70 mb-4 hover:bg-slate-100/40 dark:hover:bg-slate-800/40 transition"
               >
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-500 to-fuchsia-500 text-white flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-brand-500 to-fuchsia-500 text-white flex 
+                items-center justify-center">
                   <HiOutlinePaperClip className="w-5 h-5" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -356,7 +360,8 @@ const Notes = () => {
             />
           </div>
           <div>
-            <div className="mb-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">
+            <div className="mb-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300 
+            uppercase tracking-wider">
               Color
             </div>
             <div className="flex gap-2 flex-wrap">
