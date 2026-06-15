@@ -29,8 +29,10 @@ const ForgotPassword = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
-      <div className="absolute top-20 left-10 w-72 h-72 bg-fuchsia-500/20 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-10 w-72 h-72 bg-brand-500/20 rounded-full blur-3xl animate-float" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-fuchsia-500/20 rounded-full blur-3xl 
+      animate-float" />
+      <div className="absolute bottom-20 right-10 w-72 h-72 bg-brand-500/20 rounded-full blur-3xl 
+      animate-float" />
 
       <motion.div
         initial={{ opacity: 0, y: 12 }}
@@ -38,7 +40,8 @@ const ForgotPassword = () => {
         className="relative w-full max-w-md glass-strong rounded-3xl p-8"
       >
         <div className="flex items-center justify-center mb-5">
-          <div className="w-16 h-16 rounded-3xl bg-gradient-to-br from-fuchsia-500 to-pink-500 flex items-center justify-center shadow-glow">
+          <div className="w-16 h-16 rounded-3xl bg-gradient-to-br from-fuchsia-500 
+          to-pink-500 flex items-center justify-center shadow-glow">
             <HiOutlineLockOpen className="w-7 h-7 text-white" />
           </div>
         </div>
