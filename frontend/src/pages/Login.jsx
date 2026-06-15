@@ -52,7 +52,8 @@ const Login = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="hidden lg:flex flex-col justify-between p-10 rounded-3xl bg-gradient-to-br from-brand-600 via-fuchsia-600 to-pink-600 text-white relative overflow-hidden shadow-glow-lg"
+          className="hidden lg:flex flex-col justify-between p-10 rounded-3xl bg-gradient-to-br 
+          from-brand-600 via-fuchsia-600 to-pink-600 text-white relative overflow-hidden shadow-glow-lg"
         >
           <div className="absolute -top-20 -right-20 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
           <div className="absolute -bottom-24 -left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
