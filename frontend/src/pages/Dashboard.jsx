@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   HiOutlineClipboardCheck,
   HiOutlineClock,
@@ -9,7 +9,7 @@ import {
   HiOutlineArrowRight,
   HiOutlineSparkles,
   HiOutlineCalendar,
-} from 'react-icons/hi';
+} from "react-icons/hi";
 import {
   AreaChart,
   Area,
@@ -21,22 +21,33 @@ import {
   Pie,
   Cell,
   CartesianGrid,
-} from 'recharts';
-import PageHeader from '../components/ui/PageHeader';
-import { SkeletonCard, Skeleton } from '../components/ui/Skeleton';
-import { statsService } from '../services/statsService';
-import { taskService } from '../services/taskService';
-import { scheduleService } from '../services/scheduleService';
-import { useAuth } from '../context/AuthContext';
-import { fmtRelative, priorityStyles, subjectColors } from '../utils/helpers';
+} from "recharts";
+import PageHeader from "../components/ui/PageHeader";
+import { SkeletonCard, Skeleton } from "../components/ui/Skeleton";
+import { statsService } from "../services/statsService";
+import { taskService } from "../services/taskService";
+import { scheduleService } from "../services/scheduleService";
+import { useAuth } from "../context/AuthContext";
+import { fmtRelative, priorityStyles, subjectColors } from "../utils/helpers";
 
-const PIE_COLORS = ['#6366f1', '#a855f7', '#ec4899', '#f59e0b', '#10b981', '#06b6d4', '#64748b'];
+const PIE_COLORS = [
+  "#6366f1",
+  "#a855f7",
+  "#ec4899",
+  "#f59e0b",
+  "#10b981",
+  "#06b6d4",
+  "#64748b",
+];
 
 const Dashboard = () => {
   const { user } = useAuth();
   const [stats, setStats] = useState(null);
   const [series, setSeries] = useState([]);
-  const [subjects, setSubjects] = useState({ tasksBySubject: [], sessionsBySubject: [] });
+  const [subjects, setSubjects] = useState({
+    tasksBySubject: [],
+    sessionsBySubject: [],
+  });
   const [upcoming, setUpcoming] = useState([]);
   const [todaySchedule, setTodaySchedule] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -47,7 +58,7 @@ const Dashboard = () => {
         const [ov, sub, tasksRes, schedRes] = await Promise.all([
           statsService.overview(),
           statsService.subjects(),
-          taskService.list({ status: 'pending', sort: 'deadline' }),
+          taskService.list({ status: "pending", sort: "deadline" }),
           scheduleService.list(),
         ]);
         setStats(ov.stats);
@@ -62,7 +73,7 @@ const Dashboard = () => {
           (schedRes.schedules || []).filter((s) => {
             const d = new Date(s.date);
             return d >= today && d < tom;
-          })
+          }),
         );
       } catch (e) {
         // best-effort
@@ -75,9 +86,9 @@ const Dashboard = () => {
 
   const greeting = (() => {
     const h = new Date().getHours();
-    if (h < 12) return 'Good morning';
-    if (h < 18) return 'Good afternoon';
-    return 'Good evening';
+    if (h < 12) return "Good morning";
+    if (h < 18) return "Good afternoon";
+    return "Good evening";
   })();
 
   return (
@@ -86,7 +97,9 @@ const Dashboard = () => {
         eyebrow={greeting}
         title={
           <>
-            Hey <span className="gradient-text">{user?.name?.split(' ')[0]}</span> 👋
+            Hey{" "}
+            <span className="gradient-text">{user?.name?.split(" ")[0]}</span>{" "}
+            👋
           </>
         }
         description="Here's your snapshot for today — let's make it a productive one."
@@ -158,17 +171,24 @@ const Dashboard = () => {
                       <stop offset="100%" stopColor="#6366f1" stopOpacity={0} />
                     </linearGradient>
                   </defs>
-                  <CartesianGrid stroke="rgb(148 163 184 / 0.15)" vertical={false} />
-                  <XAxis dataKey="label" tick={{ fontSize: 12 }} stroke="#94a3b8" />
+                  <CartesianGrid
+                    stroke="rgb(148 163 184 / 0.15)"
+                    vertical={false}
+                  />
+                  <XAxis
+                    dataKey="label"
+                    tick={{ fontSize: 12 }}
+                    stroke="#94a3b8"
+                  />
                   <YAxis tick={{ fontSize: 12 }} stroke="#94a3b8" />
                   <Tooltip
                     contentStyle={{
-                      background: 'rgba(15,23,42,0.9)',
-                      border: '1px solid rgba(99,102,241,0.4)',
+                      background: "rgba(15,23,42,0.9)",
+                      border: "1px solid rgba(99,102,241,0.4)",
                       borderRadius: 12,
-                      color: '#fff',
+                      color: "#fff",
                     }}
-                    formatter={(v) => [`${v} h`, 'Focus']}
+                    formatter={(v) => [`${v} h`, "Focus"]}
                   />
                   <Area
                     type="monotone"
@@ -186,7 +206,9 @@ const Dashboard = () => {
         {/* Pie: subjects */}
         <div className="card p-5">
           <h3 className="font-display font-semibold">Subjects</h3>
-          <p className="text-xs text-slate-500 dark:text-slate-400">Tasks distribution</p>
+          <p className="text-xs text-slate-500 dark:text-slate-400">
+            Tasks distribution
+          </p>
           <div className="h-52 mt-2">
             {loading ? (
               <Skeleton className="h-full w-full" />
@@ -207,10 +229,10 @@ const Dashboard = () => {
                   </Pie>
                   <Tooltip
                     contentStyle={{
-                      background: 'rgba(15,23,42,0.9)',
-                      border: '1px solid rgba(99,102,241,0.4)',
+                      background: "rgba(15,23,42,0.9)",
+                      border: "1px solid rgba(99,102,241,0.4)",
                       borderRadius: 12,
-                      color: '#fff',
+                      color: "#fff",
                     }}
                   />
                 </PieChart>
@@ -246,7 +268,11 @@ const Dashboard = () => {
                 Stay ahead of deadlines
               </p>
             </div>
-            <Link to="/tasks" className="text-xs text-brand-500 font-semibold flex items-center gap-1 hover:underline">
+            <Link
+              to="/tasks"
+              className="text-xs text-brand-500 font-semibold flex items-center 
+            gap-1 hover:underline"
+            >
               View all <HiOutlineArrowRight className="w-3 h-3" />
             </Link>
           </div>
@@ -269,17 +295,25 @@ const Dashboard = () => {
                     initial={{ opacity: 0, y: 6 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.05 }}
-                    className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-100/60 dark:hover:bg-slate-800/60 transition border border-transparent hover:border-slate-200/70 dark:hover:border-slate-700/70"
+                    className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-100/60 
+                    dark:hover:bg-slate-800/60 transition border border-transparent hover:border-slate-200/70 
+                    dark:hover:border-slate-700/70"
                   >
                     <div className={`w-2 self-stretch rounded-full ${c.dot}`} />
                     <div className="flex-1 min-w-0">
-                      <div className="text-sm font-medium truncate">{t.title}</div>
+                      <div className="text-sm font-medium truncate">
+                        {t.title}
+                      </div>
                       <div className="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-2">
-                        <span className={`chip ${c.bg} ${c.text}`}>{t.subject}</span>
+                        <span className={`chip ${c.bg} ${c.text}`}>
+                          {t.subject}
+                        </span>
                         {t.deadline && <span>{fmtRelative(t.deadline)}</span>}
                       </div>
                     </div>
-                    <span className={`chip ${priorityStyles[t.priority]}`}>{t.priority}</span>
+                    <span className={`chip ${priorityStyles[t.priority]}`}>
+                      {t.priority}
+                    </span>
                   </motion.div>
                 );
               })
@@ -293,10 +327,10 @@ const Dashboard = () => {
             <div>
               <h3 className="font-display font-semibold">Today's Schedule</h3>
               <p className="text-xs text-slate-500 dark:text-slate-400">
-                {new Date().toLocaleDateString('en-US', {
-                  weekday: 'long',
-                  month: 'long',
-                  day: 'numeric',
+                {new Date().toLocaleDateString("en-US", {
+                  weekday: "long",
+                  month: "long",
+                  day: "numeric",
                 })}
               </p>
             </div>
@@ -327,15 +361,20 @@ const Dashboard = () => {
                     initial={{ opacity: 0, y: 6 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.05 }}
-                    className="flex items-center gap-3 p-3 rounded-xl border border-slate-200/70 dark:border-slate-700/70"
+                    className="flex items-center gap-3 p-3 rounded-xl border border-slate-200/70 
+                    dark:border-slate-700/70"
                   >
                     <div className="text-right shrink-0 w-16">
                       <div className="text-sm font-semibold">{s.startTime}</div>
-                      <div className="text-[10px] text-slate-400 uppercase">to {s.endTime}</div>
+                      <div className="text-[10px] text-slate-400 uppercase">
+                        to {s.endTime}
+                      </div>
                     </div>
                     <div className={`w-1 self-stretch rounded-full ${c.dot}`} />
                     <div className="flex-1 min-w-0">
-                      <div className="text-sm font-medium truncate">{s.title}</div>
+                      <div className="text-sm font-medium truncate">
+                        {s.title}
+                      </div>
                       <div className={`text-xs ${c.text}`}>{s.subject}</div>
                     </div>
                   </motion.div>
@@ -356,7 +395,8 @@ const StatCard = ({ loading, icon: Icon, label, value, sub, gradient }) => (
     className="stat-card"
   >
     <div className="flex items-center justify-between">
-      <div className="text-xs font-semibold tracking-wider uppercase text-slate-500 dark:text-slate-400">
+      <div className="text-xs font-semibold tracking-wider uppercase text-slate-500 
+      dark:text-slate-400">
         {label}
       </div>
       <div
