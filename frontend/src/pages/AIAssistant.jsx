@@ -213,7 +213,8 @@ const AIAssistant = () => {
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="w-20 h-20 rounded-3xl bg-gradient-aurora bg-[length:200%_200%] animate-gradient-x flex items-center justify-center shadow-glow mb-5"
+                  className="w-20 h-20 rounded-3xl bg-gradient-aurora bg-[length:200%_200%] 
+                  animate-gradient-x flex items-center justify-center shadow-glow mb-5"
                 >
                   <HiOutlineSparkles className="w-9 h-9 text-white" />
                 </motion.div>
@@ -235,10 +236,13 @@ const AIAssistant = () => {
                         setMode(s.mode);
                         send(s.prompt, s.mode);
                       }}
-                      className="text-left p-4 rounded-2xl bg-white/60 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/70 hover:border-brand-500/50 hover:-translate-y-0.5 hover:shadow-glow transition group"
+                      className="text-left p-4 rounded-2xl bg-white/60 dark:bg-slate-800/60 border 
+                      border-slate-200/70 dark:border-slate-700/70 hover:border-brand-500/50 hover:-translate-y-0.5 
+                      hover:shadow-glow transition group"
                     >
                       <div className="flex items-center gap-2 mb-1">
-                        <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-brand-500/20 to-fuchsia-500/20 text-brand-500 flex items-center justify-center">
+                        <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-brand-500/20 to-fuchsia-500/20 
+                        text-brand-500 flex items-center justify-center">
                           <s.icon className="w-4 h-4" />
                         </div>
                         <div className="text-sm font-semibold">{s.title}</div>
@@ -261,7 +265,8 @@ const AIAssistant = () => {
           </div>
 
           {/* Composer */}
-          <div className="border-t border-slate-200/70 dark:border-slate-700/70 p-3 sm:p-4 bg-white/30 dark:bg-slate-900/30">
+          <div className="border-t border-slate-200/70 dark:border-slate-700/70 p-3 sm:p-4 bg-white/30 
+          dark:bg-slate-900/30">
             <div className="flex items-center gap-2 mb-2 flex-wrap">
               {[
                 { key: 'chat', label: 'Chat' },
