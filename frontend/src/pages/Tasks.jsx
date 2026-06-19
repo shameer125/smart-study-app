@@ -224,7 +224,8 @@ const Tasks = () => {
       {/* Filters bar */}
       <div className="card p-3 flex flex-wrap items-center gap-2">
         <div className="relative flex-1 min-w-[180px]">
-          <HiOutlineSearch className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+          <HiOutlineSearch className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 
+          text-slate-400" />
           <input
             value={search}
             onChange={(e) => {
@@ -232,7 +233,8 @@ const Tasks = () => {
               setParams(e.target.value ? { search: e.target.value } : {});
             }}
             placeholder="Search tasks…"
-            className="w-full pl-9 pr-3 py-2 bg-slate-100/70 dark:bg-slate-800/60 rounded-xl text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/40"
+            className="w-full pl-9 pr-3 py-2 bg-slate-100/70 dark:bg-slate-800/60 rounded-xl 
+            text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/40"
           />
         </div>
         <Pill
@@ -424,7 +426,9 @@ const Pill = ({ icon: Icon, label, value, options, onChange }) => (
     <select
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="appearance-none pl-8 pr-7 py-2 bg-slate-100/70 dark:bg-slate-800/60 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-brand-500/40 cursor-pointer"
+      className="appearance-none pl-8 pr-7 py-2 bg-slate-100/70 dark:bg-slate-800/60 
+      rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-brand-500/40 
+      cursor-pointer"
     >
       {options.map((o) => (
         <option key={o.value} value={o.value}>
@@ -433,7 +437,8 @@ const Pill = ({ icon: Icon, label, value, options, onChange }) => (
       ))}
     </select>
     {Icon && (
-      <Icon className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+      <Icon className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 
+      pointer-events-none" />
     )}
   </div>
 );
@@ -480,7 +485,9 @@ const TaskCard = ({ task, onEdit, onDelete, onStatus }) => {
   return (
     <motion.div
       layout
-      className="group p-3 rounded-xl bg-white/70 dark:bg-slate-900/60 border border-slate-200/70 dark:border-slate-700/70 hover:shadow-soft hover:-translate-y-0.5 transition cursor-grab active:cursor-grabbing"
+      className="group p-3 rounded-xl bg-white/70 dark:bg-slate-900/60 border 
+      border-slate-200/70 dark:border-slate-700/70 hover:shadow-soft hover:-translate-y-0.5 
+      transition cursor-grab active:cursor-grabbing"
     >
       <div className="flex items-start gap-2">
         <div className="flex-1 min-w-0">
