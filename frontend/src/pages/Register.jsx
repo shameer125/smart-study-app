@@ -127,12 +127,15 @@ const Register = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="hidden lg:flex flex-col justify-between p-10 rounded-3xl bg-gradient-to-br from-fuchsia-600 via-pink-600 to-amber-500 text-white relative overflow-hidden shadow-glow-lg order-1 lg:order-2"
+          className="hidden lg:flex flex-col justify-between p-10 rounded-3xl bg-gradient-to-br 
+          from-fuchsia-600 via-pink-600 to-amber-500 text-white relative 
+          overflow-hidden shadow-glow-lg order-1 lg:order-2"
         >
           <div className="absolute -top-20 -left-20 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
           <div>
             <div className="flex items-center gap-2.5">
-              <div className="w-11 h-11 rounded-2xl bg-white/15 backdrop-blur flex items-center justify-center">
+              <div className="w-11 h-11 rounded-2xl bg-white/15 backdrop-blur flex items-center 
+              justify-center">
                 <HiOutlineSparkles className="w-6 h-6" />
               </div>
               <div className="font-display font-bold text-xl">SmartStudy</div>
