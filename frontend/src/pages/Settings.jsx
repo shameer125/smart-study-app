@@ -65,7 +65,8 @@ const Settings = () => {
         {/* Appearance */}
         <div className="card p-6">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-fuchsia-500 text-white flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-fuchsia-500 
+            text-white flex items-center justify-center">
               <HiOutlineColorSwatch className="w-5 h-5" />
             </div>
             <div>
@@ -106,7 +107,8 @@ const Settings = () => {
         {/* Pomodoro */}
         <div className="card p-6">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 text-white flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 
+            text-white flex items-center justify-center">
               <HiOutlineClock className="w-5 h-5" />
             </div>
             <div>
@@ -146,13 +148,15 @@ const Settings = () => {
             <Button onClick={savePomodoro} loading={savingPref}>
               Save
             </Button>
+
           </div>
         </div>
 
         {/* Password */}
         <form onSubmit={changePassword} className="card p-6 lg:col-span-2">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 text-white flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 
+            text-white flex items-center justify-center">
               <HiOutlineLockClosed className="w-5 h-5" />
             </div>
             <div>
