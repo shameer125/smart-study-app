@@ -51,7 +51,8 @@ const Profile = () => {
 
   return (
     <div className="space-y-5">
-      <PageHeader eyebrow="Account" title="Your Profile" description="Manage your personal info and view progress." />
+      <PageHeader eyebrow="Account" title="Your Profile" description="Manage your personal 
+      info and view progress." />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         <motion.div
@@ -61,7 +62,8 @@ const Profile = () => {
         >
           <div className="absolute inset-x-0 top-0 h-24 bg-gradient-aurora bg-[length:200%_200%] animate-gradient-x opacity-90" />
           <div className="relative pt-8 flex flex-col items-center text-center">
-            <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-brand-500 to-fuchsia-500 text-white text-3xl font-bold flex items-center justify-center ring-4 ring-white dark:ring-slate-900 shadow-xl">
+            <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-brand-500 to-fuchsia-500 text-white text-3xl 
+            font-bold flex items-center justify-center ring-4 ring-white dark:ring-slate-900 shadow-xl">
               {initials(user?.name)}
             </div>
             <h2 className="mt-4 font-display font-bold text-lg">{user?.name}</h2>
