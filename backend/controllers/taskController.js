@@ -45,6 +45,7 @@ const createTask = asyncHandler(async (req, res) => {
   res.status(201).json({ success: true, task });
 });
 
+
 const updateTask = asyncHandler(async (req, res) => {
   const task = await Task.findOne({ _id: req.params.id, userId: req.user._id });
   if (!task) return res.status(404).json({ success: false, message: 'Task not found' });
@@ -54,6 +55,7 @@ const updateTask = asyncHandler(async (req, res) => {
     if (req.body[f] !== undefined) task[f] = req.body[f];
   });
 
+  
   if (req.body.status === 'completed' && !task.completedAt) {
     task.completedAt = new Date();
   }
