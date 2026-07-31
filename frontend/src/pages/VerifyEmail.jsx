@@ -80,7 +80,8 @@ const VerifyEmail = () => {
         className="relative w-full max-w-md glass-strong rounded-3xl p-8"
       >
         <div className="flex items-center justify-center mb-5">
-          <div className="w-16 h-16 rounded-3xl bg-gradient-aurora bg-[length:200%_200%] animate-gradient-x flex items-center justify-center shadow-glow">
+          <div className="w-16 h-16 rounded-3xl bg-gradient-aurora bg-[length:200%_200%] animate-gradient-x 
+          flex items-center justify-center shadow-glow">
             <HiOutlineMail className="w-7 h-7 text-white" />
           </div>
         </div>
@@ -123,7 +124,8 @@ const VerifyEmail = () => {
           </Link>
         </div>
 
-        <div className="mt-6 flex items-center justify-center gap-1.5 text-[10px] uppercase tracking-wider text-slate-400">
+        <div className="mt-6 flex items-center justify-center gap-1.5 text-[10px] uppercase tracking-wider 
+        text-slate-400">
           <HiOutlineSparkles className="w-3 h-3" /> Secured by Smart Study
         </div>
       </motion.div>
