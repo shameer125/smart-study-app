@@ -24,6 +24,7 @@ const getClient = () => {
   return openai;
 };
 
+
 const SYSTEM_PROMPT = `You are "Aria", the in-app Smart Study AI Assistant.
 Your job is to help students learn effectively. You can:
 - Explain concepts in simple terms with examples
@@ -70,6 +71,7 @@ const chat = asyncHandler(async (req, res) => {
     content: message,
   });
 
+  
   const messages = [
     { role: 'system', content: SYSTEM_PROMPT },
     ...history.slice(-12).map((m) => ({ role: m.role, content: m.content })),
